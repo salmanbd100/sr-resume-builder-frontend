@@ -1,41 +1,43 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Star } from "lucide-react"
+import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Software Engineer",
-    company: "Google",
-    image: "/placeholder.svg?height=40&width=40",
-    content: "This resume builder helped me land my dream job at Google. The ATS optimization really works!",
+    name: 'Sarah Johnson',
+    role: 'Software Engineer',
+    company: 'Google',
+    image: '/placeholder.svg?height=40&width=40',
+    content:
+      'This resume builder helped me land my dream job at Google. The ATS optimization really works!',
     rating: 5,
   },
   {
-    name: "Michael Chen",
-    role: "Marketing Manager",
-    company: "Microsoft",
-    image: "/placeholder.svg?height=40&width=40",
-    content: "Clean, professional templates and super easy to use. Got 3 interview calls within a week!",
+    name: 'Michael Chen',
+    role: 'Marketing Manager',
+    company: 'Microsoft',
+    image: '/placeholder.svg?height=40&width=40',
+    content:
+      'Clean, professional templates and super easy to use. Got 3 interview calls within a week!',
     rating: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Data Scientist",
-    company: "Amazon",
-    image: "/placeholder.svg?height=40&width=40",
-    content: "The PDF export quality is excellent. My resume looks exactly how I designed it.",
+    name: 'Emily Rodriguez',
+    role: 'Data Scientist',
+    company: 'Amazon',
+    image: '/placeholder.svg?height=40&width=40',
+    content: 'The PDF export quality is excellent. My resume looks exactly how I designed it.',
     rating: 5,
   },
   {
-    name: "David Kim",
-    role: "Product Manager",
-    company: "Apple",
-    image: "/placeholder.svg?height=40&width=40",
+    name: 'David Kim',
+    role: 'Product Manager',
+    company: 'Apple',
+    image: '/placeholder.svg?height=40&width=40',
     content: "Best resume builder I've used. The templates are modern and ATS-friendly.",
     rating: 5,
   },
-]
+];
 
 export function Testimonials() {
   return (
@@ -60,12 +62,15 @@ export function Testimonials() {
                 <p className="text-sm text-muted-foreground">"{testimonial.content}"</p>
                 <div className="flex items-center space-x-3">
                   <Avatar className="h-10 w-10">
-                    <AvatarImage src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} />
+                    <AvatarImage
+                      src={testimonial.image || '/placeholder.svg'}
+                      alt={testimonial.name}
+                    />
                     <AvatarFallback>
                       {testimonial.name
-                        .split(" ")
+                        .split(' ')
                         .map((n) => n[0])
-                        .join("")}
+                        .join('')}
                     </AvatarFallback>
                   </Avatar>
                   <div>
@@ -81,5 +86,5 @@ export function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Download, FileText } from "lucide-react"
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, CheckCircle, Download, FileText } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -13,8 +13,8 @@ export function Hero() {
                 Build Your Perfect <span className="text-primary">ATS-Compliant</span> Resume
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                Create professional resumes that pass Applicant Tracking Systems and land you interviews. Export to PDF
-                in seconds.
+                Create professional resumes that pass Applicant Tracking Systems and land you
+                interviews. Export to PDF in seconds.
               </p>
             </div>
 
@@ -73,5 +73,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-"use client"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+'use client';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 
 interface SummaryFormProps {
-  data: string
-  onChange: (data: string) => void
+  data: string;
+  onChange: (data: string) => void;
 }
 
 export function SummaryForm({ data, onChange }: SummaryFormProps) {
@@ -19,7 +19,9 @@ export function SummaryForm({ data, onChange }: SummaryFormProps) {
           value={data}
           onChange={(e) => onChange(e.target.value)}
         />
-        <p className="text-sm text-muted-foreground">{data.length}/500 characters. Aim for 50-150 words.</p>
+        <p className="text-sm text-muted-foreground">
+          {data.length}/500 characters. Aim for 50-150 words.
+        </p>
       </div>
 
       <div className="bg-muted/50 p-4 rounded-lg">
@@ -32,5 +34,5 @@ export function SummaryForm({ data, onChange }: SummaryFormProps) {
         </ul>
       </div>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, Download, Eye, TrendingUp } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { FileText, Download, Eye, TrendingUp } from 'lucide-react';
 
 export function DashboardStats() {
   return (
@@ -45,5 +45,5 @@ export function DashboardStats() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

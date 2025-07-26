@@ -1,49 +1,49 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { useState } from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { MoreHorizontal, Edit, Download, Copy, Trash2, Eye, Plus, FileText } from "lucide-react"
-import Link from "next/link"
+} from '@/components/ui/dropdown-menu';
+import { MoreHorizontal, Edit, Download, Copy, Trash2, Eye, Plus, FileText } from 'lucide-react';
+import Link from 'next/link';
 
 // Mock data - replace with actual data fetching
 const mockResumes = [
   {
-    id: "1",
-    title: "Software Engineer Resume",
-    templateId: "modern",
-    templateName: "Modern Professional",
-    updatedAt: "2024-01-15",
-    status: "published",
+    id: '1',
+    title: 'Software Engineer Resume',
+    templateId: 'modern',
+    templateName: 'Modern Professional',
+    updatedAt: '2024-01-15',
+    status: 'published',
   },
   {
-    id: "2",
-    title: "Frontend Developer Resume",
-    templateId: "minimal",
-    templateName: "Minimal Clean",
-    updatedAt: "2024-01-10",
-    status: "draft",
+    id: '2',
+    title: 'Frontend Developer Resume',
+    templateId: 'minimal',
+    templateName: 'Minimal Clean',
+    updatedAt: '2024-01-10',
+    status: 'draft',
   },
   {
-    id: "3",
-    title: "Full Stack Developer Resume",
-    templateId: "classic",
-    templateName: "Classic Executive",
-    updatedAt: "2024-01-05",
-    status: "published",
+    id: '3',
+    title: 'Full Stack Developer Resume',
+    templateId: 'classic',
+    templateName: 'Classic Executive',
+    updatedAt: '2024-01-05',
+    status: 'published',
   },
-]
+];
 
 export function ResumeGrid() {
-  const [resumes] = useState(mockResumes)
+  const [resumes] = useState(mockResumes);
 
   return (
     <div className="space-y-6">
@@ -133,7 +133,9 @@ export function ResumeGrid() {
               </CardContent>
               <CardFooter className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Badge variant={resume.status === "published" ? "default" : "secondary"}>{resume.status}</Badge>
+                  <Badge variant={resume.status === 'published' ? 'default' : 'secondary'}>
+                    {resume.status}
+                  </Badge>
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Updated {new Date(resume.updatedAt).toLocaleDateString()}
@@ -144,5 +146,5 @@ export function ResumeGrid() {
         </div>
       )}
     </div>
-  )
+  );
 }

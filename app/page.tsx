@@ -1,11 +1,11 @@
-import { Header } from "@/components/layout/header"
-import { Hero } from "@/components/sections/hero"
-import { Features } from "@/components/sections/features"
-import { Templates } from "@/components/sections/templates"
-import { Testimonials } from "@/components/sections/testimonials"
-import { FAQ } from "@/components/sections/faq"
-import { CTA } from "@/components/sections/cta"
-import { Footer } from "@/components/layout/footer"
+import { Header } from '@/components/layout/header';
+import { Hero } from '@/components/sections/hero';
+import { Features } from '@/components/sections/features';
+import { Templates } from '@/components/sections/templates';
+import { Testimonials } from '@/components/sections/testimonials';
+import { FAQ } from '@/components/sections/faq';
+import { CTA } from '@/components/sections/cta';
+import { Footer } from '@/components/layout/footer';
 
 export default function HomePage() {
   return (
@@ -21,5 +21,5 @@ export default function HomePage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import { SignInForm } from "@/components/auth/signin-form"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
-import { FileText } from "lucide-react"
+import { SignInForm } from '@/components/auth/signin-form';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
+import { FileText } from 'lucide-react';
 
 export default function SignInPage() {
   return (
@@ -17,7 +17,9 @@ export default function SignInPage() {
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Welcome back</CardTitle>
-            <CardDescription>Sign in to your account to continue building your resume</CardDescription>
+            <CardDescription>
+              Sign in to your account to continue building your resume
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <SignInForm />
@@ -25,12 +27,12 @@ export default function SignInPage() {
         </Card>
 
         <p className="text-center text-sm text-muted-foreground">
-          Don't have an account?{" "}
+          Don't have an account?{' '}
           <Link href="/auth/signup" className="text-primary hover:underline">
             Sign up
           </Link>
         </p>
       </div>
     </div>
-  )
+  );
 }

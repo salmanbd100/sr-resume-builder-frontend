@@ -1,20 +1,20 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { useSession, signOut } from "next-auth/react"
-import { Button } from "@/components/ui/button"
+import Link from 'next/link';
+import { useSession, signOut } from 'next-auth/react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { FileText, User, LogOut, Settings } from "lucide-react"
+} from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { FileText, User, LogOut, Settings } from 'lucide-react';
 
 export function Header() {
-  const { data: session, status } = useSession()
+  const { data: session, status } = useSession();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -25,13 +25,22 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#features"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Features
           </Link>
-          <Link href="#templates" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#templates"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Templates
           </Link>
-          <Link href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#testimonials"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Testimonials
           </Link>
           <Link href="#faq" className="text-sm font-medium hover:text-primary transition-colors">
@@ -40,15 +49,17 @@ export function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          {status === "loading" ? (
+          {status === 'loading' ? (
             <div className="h-8 w-20 bg-muted animate-pulse rounded" />
           ) : session ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src={session.user?.image || ""} alt={session.user?.name || ""} />
-                    <AvatarFallback>{session.user?.name?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+                    <AvatarImage src={session.user?.image || ''} alt={session.user?.name || ''} />
+                    <AvatarFallback>
+                      {session.user?.name?.charAt(0).toUpperCase() || 'U'}
+                    </AvatarFallback>
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>
@@ -56,7 +67,9 @@ export function Header() {
                 <div className="flex items-center justify-start gap-2 p-2">
                   <div className="flex flex-col space-y-1 leading-none">
                     <p className="font-medium">{session.user?.name}</p>
-                    <p className="w-[200px] truncate text-sm text-muted-foreground">{session.user?.email}</p>
+                    <p className="w-[200px] truncate text-sm text-muted-foreground">
+                      {session.user?.email}
+                    </p>
                   </div>
                 </div>
                 <DropdownMenuSeparator />
@@ -92,5 +105,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

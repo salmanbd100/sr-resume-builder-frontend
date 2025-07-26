@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { FileText, Github, Twitter, Linkedin } from "lucide-react"
+import Link from 'next/link';
+import { FileText, Github, Twitter, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -106,5 +106,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

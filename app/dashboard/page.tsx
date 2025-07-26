@@ -1,6 +1,6 @@
-import { DashboardHeader } from "@/components/dashboard/dashboard-header"
-import { ResumeGrid } from "@/components/dashboard/resume-grid"
-import { DashboardStats } from "@/components/dashboard/dashboard-stats"
+import { DashboardHeader } from '@/components/dashboard/dashboard-header';
+import { ResumeGrid } from '@/components/dashboard/resume-grid';
+import { DashboardStats } from '@/components/dashboard/dashboard-stats';
 
 export default function DashboardPage() {
   return (
@@ -11,5 +11,5 @@ export default function DashboardPage() {
         <ResumeGrid />
       </main>
     </div>
-  )
+  );
 }

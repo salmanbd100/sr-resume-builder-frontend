@@ -1,26 +1,32 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Plus, X } from "lucide-react"
-import type { Skill } from "@/lib/types"
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Badge } from '@/components/ui/badge';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Plus, X } from 'lucide-react';
+import type { Skill } from '@/lib/types';
 
 interface SkillsFormProps {
-  data: Skill[]
-  onChange: (data: Skill[]) => void
+  data: Skill[];
+  onChange: (data: Skill[]) => void;
 }
 
 export function SkillsForm({ data, onChange }: SkillsFormProps) {
   const [newSkill, setNewSkill] = useState({
-    name: "",
-    category: "technical" as const,
-    level: "intermediate" as const,
-  })
+    name: '',
+    category: 'technical' as const,
+    level: 'intermediate' as const,
+  });
 
   const addSkill = () => {
     if (newSkill.name.trim()) {
@@ -29,36 +35,36 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
         name: newSkill.name.trim(),
         category: newSkill.category,
         level: newSkill.level,
-      }
-      onChange([...data, skill])
-      setNewSkill({ name: "", category: "technical", level: "intermediate" })
+      };
+      onChange([...data, skill]);
+      setNewSkill({ name: '', category: 'technical', level: 'intermediate' });
     }
-  }
+  };
 
   const removeSkill = (id: string) => {
-    onChange(data.filter((skill) => skill.id !== id))
-  }
+    onChange(data.filter((skill) => skill.id !== id));
+  };
 
   const skillsByCategory = {
-    technical: data.filter((skill) => skill.category === "technical"),
-    soft: data.filter((skill) => skill.category === "soft"),
-    language: data.filter((skill) => skill.category === "language"),
-  }
+    technical: data.filter((skill) => skill.category === 'technical'),
+    soft: data.filter((skill) => skill.category === 'soft'),
+    language: data.filter((skill) => skill.category === 'language'),
+  };
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case "beginner":
-        return "bg-red-100 text-red-800"
-      case "intermediate":
-        return "bg-yellow-100 text-yellow-800"
-      case "advanced":
-        return "bg-blue-100 text-blue-800"
-      case "expert":
-        return "bg-green-100 text-green-800"
+      case 'beginner':
+        return 'bg-red-100 text-red-800';
+      case 'intermediate':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'advanced':
+        return 'bg-blue-100 text-blue-800';
+      case 'expert':
+        return 'bg-green-100 text-green-800';
       default:
-        return "bg-gray-100 text-gray-800"
+        return 'bg-gray-100 text-gray-800';
     }
-  }
+  };
 
   return (
     <div className="space-y-6">
@@ -76,7 +82,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
                 placeholder="e.g., JavaScript, Leadership"
                 value={newSkill.name}
                 onChange={(e) => setNewSkill((prev) => ({ ...prev, name: e.target.value }))}
-                onKeyPress={(e) => e.key === "Enter" && addSkill()}
+                onKeyPress={(e) => e.key === 'Enter' && addSkill()}
               />
             </div>
 
@@ -84,7 +90,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
               <Label htmlFor="skillCategory">Category</Label>
               <Select
                 value={newSkill.category}
-                onValueChange={(value: "technical" | "soft" | "language") =>
+                onValueChange={(value: 'technical' | 'soft' | 'language') =>
                   setNewSkill((prev) => ({ ...prev, category: value }))
                 }
               >
@@ -103,7 +109,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
               <Label htmlFor="skillLevel">Proficiency Level</Label>
               <Select
                 value={newSkill.level}
-                onValueChange={(value: "beginner" | "intermediate" | "advanced" | "expert") =>
+                onValueChange={(value: 'beginner' | 'intermediate' | 'advanced' | 'expert') =>
                   setNewSkill((prev) => ({ ...prev, level: value }))
                 }
               >
@@ -226,5 +232,5 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
         </div>
       )}
     </div>
-  )
+  );
 }

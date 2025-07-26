@@ -1,50 +1,56 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, Download, Zap, Shield, Smartphone, Users } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { FileText, Download, Zap, Shield, Smartphone, Users } from 'lucide-react';
 
 const features = [
   {
     icon: FileText,
-    title: "ATS-Compliant Templates",
+    title: 'ATS-Compliant Templates',
     description:
-      "Our templates are designed to pass Applicant Tracking Systems, ensuring your resume gets seen by human recruiters.",
+      'Our templates are designed to pass Applicant Tracking Systems, ensuring your resume gets seen by human recruiters.',
   },
   {
     icon: Download,
-    title: "Instant PDF Export",
-    description: "Export your resume to high-quality PDF format with a single click. Perfect formatting guaranteed.",
+    title: 'Instant PDF Export',
+    description:
+      'Export your resume to high-quality PDF format with a single click. Perfect formatting guaranteed.',
   },
   {
     icon: Zap,
-    title: "Quick & Easy Builder",
-    description: "Build your resume in minutes with our intuitive step-by-step builder. No design skills required.",
+    title: 'Quick & Easy Builder',
+    description:
+      'Build your resume in minutes with our intuitive step-by-step builder. No design skills required.',
   },
   {
     icon: Shield,
-    title: "Secure & Private",
-    description: "Your data is encrypted and secure. We never share your information with third parties.",
+    title: 'Secure & Private',
+    description:
+      'Your data is encrypted and secure. We never share your information with third parties.',
   },
   {
     icon: Smartphone,
-    title: "Mobile Responsive",
+    title: 'Mobile Responsive',
     description:
-      "Build and edit your resume on any device. Our platform works seamlessly on desktop, tablet, and mobile.",
+      'Build and edit your resume on any device. Our platform works seamlessly on desktop, tablet, and mobile.',
   },
   {
     icon: Users,
-    title: "Multiple Templates",
-    description: "Choose from various professional templates designed for different industries and career levels.",
+    title: 'Multiple Templates',
+    description:
+      'Choose from various professional templates designed for different industries and career levels.',
   },
-]
+];
 
 export function Features() {
   return (
     <section id="features" className="py-20 bg-muted/50">
       <div className="container px-4 mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold">Everything You Need to Build the Perfect Resume</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold">
+            Everything You Need to Build the Perfect Resume
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our platform provides all the tools and features you need to create a professional, ATS-compliant resume
-            that gets results.
+            Our platform provides all the tools and features you need to create a professional,
+            ATS-compliant resume that gets results.
           </p>
         </div>
 
@@ -65,5 +71,5 @@ export function Features() {
         </div>
       </div>
     </section>
-  )
+  );
 }
