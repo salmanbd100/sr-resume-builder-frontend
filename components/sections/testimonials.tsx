@@ -59,7 +59,7 @@ export function Testimonials() {
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-sm text-muted-foreground">"{testimonial.content}"</p>
+                <p className='text-sm text-muted-foreground'>&quot;{testimonial.content}&quot;</p>
                 <div className="flex items-center space-x-3">
                   <Avatar className="h-10 w-10">
                     <AvatarImage

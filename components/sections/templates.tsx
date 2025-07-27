@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -51,9 +52,11 @@ export function Templates() {
             <Card key={template.id} className="group hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img
+                  <Image
                     src={template.preview || '/placeholder.svg'}
                     alt={template.name}
+                    width={300}
+                    height={400}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

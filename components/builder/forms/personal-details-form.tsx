@@ -19,15 +19,12 @@ interface PersonalDetailsFormProps {
 export function PersonalDetailsForm({ data, onChange }: PersonalDetailsFormProps) {
   const {
     register,
-    handleSubmit,
     formState: { errors },
     watch,
   } = useForm<PersonalDetailsData>({
     resolver: zodResolver(personalDetailsSchema),
     defaultValues: data,
   });
-
-  const formData = watch();
 
   // Update parent component when form data changes
   React.useEffect(() => {

@@ -149,7 +149,7 @@ export function ResumePreview({ data }: ResumePreviewProps) {
                           : 'Languages'}
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {categorySkills.map((skill: any) => (
+                      {categorySkills.map((skill: Skill) => (
                         <Badge key={skill.id} variant="secondary" className="text-xs">
                           {skill.name}
                         </Badge>

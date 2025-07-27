@@ -44,6 +44,7 @@ export const resumeDataSchema = z.object({
       name: z.string().min(1, 'Skill name is required'),
       category: z.enum(['technical', 'soft', 'language']),
       level: z.enum(['beginner', 'intermediate', 'advanced', 'expert']),
+      dateAcquired: z.string().optional(),
     })
   ),
   certifications: z.array(

@@ -45,7 +45,7 @@ export function FAQ() {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold">Frequently Asked Questions</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Got questions? We've got answers. Here are the most common questions about our resume
+            Got questions? We&apos;ve got answers. Here are the most common questions about our resume
             builder.
           </p>
         </div>

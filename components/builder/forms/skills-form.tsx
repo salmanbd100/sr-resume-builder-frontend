@@ -15,6 +15,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, X } from 'lucide-react';
 import type { Skill } from '@/lib/types';
+import { DatePicker } from '@/components/ui/date-picker';
 
 interface SkillsFormProps {
   data: Skill[];
@@ -22,10 +23,16 @@ interface SkillsFormProps {
 }
 
 export function SkillsForm({ data, onChange }: SkillsFormProps) {
-  const [newSkill, setNewSkill] = useState({
+  const [newSkill, setNewSkill] = useState<{
+    name: string;
+    category: 'technical' | 'soft' | 'language';
+    level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+    dateAcquired?: string;
+  }>({
     name: '',
     category: 'technical' as const,
     level: 'intermediate' as const,
+    dateAcquired: undefined,
   });
 
   const addSkill = () => {
@@ -35,9 +42,15 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
         name: newSkill.name.trim(),
         category: newSkill.category,
         level: newSkill.level,
+        dateAcquired: newSkill.dateAcquired,
       };
       onChange([...data, skill]);
-      setNewSkill({ name: '', category: 'technical', level: 'intermediate' });
+      setNewSkill({
+        name: '',
+        category: 'technical',
+        level: 'intermediate',
+        dateAcquired: undefined,
+      });
     }
   };
 
@@ -124,6 +137,14 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
                 </SelectContent>
               </Select>
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="dateAcquired">Date Acquired (Optional)</Label>
+            <DatePicker
+              value={newSkill.dateAcquired}
+              onChange={(date) => setNewSkill((prev) => ({ ...prev, dateAcquired: date }))}
+            />
           </div>
 
           <Button onClick={addSkill} className="w-full">

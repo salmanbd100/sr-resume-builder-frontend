@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useFieldArray, useForm } from 'react-hook-form';
+import { useFieldArray, useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
@@ -9,9 +9,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Trash2 } from 'lucide-react';
+import { Plus, Trash2, CalendarIcon } from 'lucide-react';
 import { educationSchema } from '@/lib/schemas';
 import type { Education } from '@/lib/types';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Calendar } from '@/components/ui/calendar';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
+import { DatePicker } from '@/components/ui/date-picker';
 
 const educationArraySchema = z.array(educationSchema);
 
@@ -134,10 +139,37 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="space-y-2">
                 <Label htmlFor={`startDate-${index}`}>Start Date *</Label>
-                <Input
-                  id={`startDate-${index}`}
-                  type="month"
-                  {...register(`education.${index}.startDate`)}
+                <Controller
+                  control={control}
+                  name={`education.${index}.startDate`}
+                  render={({ field }) => (
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant={'outline'}
+                          className={cn(
+                            'w-full justify-start text-left font-normal',
+                            !field.value && 'text-muted-foreground'
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          {field.value ? (
+                            format(new Date(field.value), 'PPP')
+                          ) : (
+                            <span>Pick a date</span>
+                          )}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0">
+                        <Calendar
+                          mode="single"
+                          selected={field.value ? new Date(field.value) : undefined}
+                          onSelect={(date) => field.onChange(date?.toISOString())}
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+                  )}
                 />
                 {errors.education?.[index]?.startDate && (
                   <p className="text-sm text-destructive">
@@ -148,10 +180,12 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
 
               <div className="space-y-2">
                 <Label htmlFor={`endDate-${index}`}>End Date *</Label>
-                <Input
-                  id={`endDate-${index}`}
-                  type="month"
-                  {...register(`education.${index}.endDate`)}
+                <Controller
+                  control={control}
+                  name={`education.${index}.endDate`}
+                  render={({ field }) => (
+                    <DatePicker value={field.value} onChange={field.onChange} />
+                  )}
                 />
                 {errors.education?.[index]?.endDate && (
                   <p className="text-sm text-destructive">

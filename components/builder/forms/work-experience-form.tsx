@@ -11,6 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Plus, Trash2 } from 'lucide-react';
+import { DatePicker } from '@/components/ui/date-picker';
 import { workExperienceSchema } from '@/lib/schemas';
 import type { WorkExperience } from '@/lib/types';
 
@@ -137,10 +138,12 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
             <div className="grid md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor={`startDate-${index}`}>Start Date *</Label>
-                <Input
-                  id={`startDate-${index}`}
-                  type="month"
-                  {...register(`experiences.${index}.startDate`)}
+                <Controller
+                  control={control}
+                  name={`experiences.${index}.startDate`}
+                  render={({ field }) => (
+                    <DatePicker value={field.value} onChange={field.onChange} />
+                  )}
                 />
                 {errors.experiences?.[index]?.startDate && (
                   <p className="text-sm text-destructive">
@@ -151,11 +154,16 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
 
               <div className="space-y-2">
                 <Label htmlFor={`endDate-${index}`}>End Date</Label>
-                <Input
-                  id={`endDate-${index}`}
-                  type="month"
-                  disabled={watchedExperiences[index]?.current}
-                  {...register(`experiences.${index}.endDate`)}
+                <Controller
+                  control={control}
+                  name={`experiences.${index}.endDate`}
+                  render={({ field }) => (
+                    <DatePicker
+                      value={field.value}
+                      onChange={field.onChange}
+                      disabled={watchedExperiences[index]?.current}
+                    />
+                  )}
                 />
                 {errors.experiences?.[index]?.endDate && (
                   <p className="text-sm text-destructive">

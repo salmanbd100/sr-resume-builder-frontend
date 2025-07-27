@@ -67,6 +67,7 @@ export interface Skill {
   name: string;
   category: 'technical' | 'soft' | 'language';
   level: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+  dateAcquired?: string;
 }
 
 export interface Certification {

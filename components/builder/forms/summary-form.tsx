@@ -14,7 +14,7 @@ export function SummaryForm({ data, onChange }: SummaryFormProps) {
         <Label htmlFor="summary">Professional Summary *</Label>
         <Textarea
           id="summary"
-          placeholder="Write a compelling professional summary that highlights your key skills, experience, and career objectives. This should be 2-3 sentences that grab the employer's attention."
+          placeholder="Write a compelling professional summary that highlights your key skills, experience, and career objectives. This should be 2-3 sentences that grab the employer&apos;s attention."
           className="min-h-[120px]"
           value={data}
           onChange={(e) => onChange(e.target.value)}

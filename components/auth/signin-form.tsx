@@ -52,7 +52,7 @@ export function SignInForm() {
       } else {
         router.push('/dashboard');
       }
-    } catch (error) {
+    } catch {
       toast({
         title: 'Error',
         description: 'Something went wrong. Please try again.',
@@ -67,7 +67,7 @@ export function SignInForm() {
     setIsLoading(true);
     try {
       await signIn(provider, { callbackUrl: '/dashboard' });
-    } catch (error) {
+    } catch {
       toast({
         title: 'Error',
         description: 'Something went wrong. Please try again.',
