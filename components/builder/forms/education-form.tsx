@@ -52,11 +52,12 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
     name: 'education',
   });
 
-  const watchedEducation = watch('education');
-
   React.useEffect(() => {
-    onChange(watchedEducation);
-  }, [watchedEducation, onChange]);
+    const subscription = watch((value) => {
+      onChange(value.education as Education[]);
+    });
+    return () => subscription.unsubscribe();
+  }, [watch, onChange]);
 
   const addEducation = () => {
     append({

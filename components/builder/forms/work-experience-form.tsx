@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useFieldArray, useForm } from 'react-hook-form';
+import { useFieldArray, useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
@@ -56,8 +56,11 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
   const watchedExperiences = watch('experiences');
 
   React.useEffect(() => {
-    onChange(watchedExperiences);
-  }, [watchedExperiences, onChange]);
+    const subscription = watch((value) => {
+      onChange(value.experiences as WorkExperience[]);
+    });
+    return () => subscription.unsubscribe();
+  }, [watch, onChange]);
 
   const addExperience = () => {
     append({
@@ -163,7 +166,17 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
             </div>
 
             <div className="flex items-center space-x-2">
-              <Checkbox id={`current-${index}`} {...register(`experiences.${index}.current`)} />
+              <Controller
+                control={control}
+                name={`experiences.${index}.current`}
+                render={({ field }) => (
+                  <Checkbox
+                    id={`current-${index}`}
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                  />
+                )}
+              />
               <Label htmlFor={`current-${index}`}>I currently work here</Label>
             </div>
 
