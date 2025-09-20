@@ -1,7 +1,7 @@
 import { SignInForm } from '@/components/auth/signin-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { FileText } from 'lucide-react';
+import { LuFileText as FileText } from 'react-icons/lu';
 
 export default function SignInPage() {
   return (

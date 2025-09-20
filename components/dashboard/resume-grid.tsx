@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { MoreHorizontal, Edit, Download, Copy, Trash2, Eye, Plus, FileText } from 'lucide-react';
+import { LuEllipsis as MoreHorizontal, LuPencil as Edit, LuDownload as Download, LuCopy as Copy, LuTrash2 as Trash2, LuEye as Eye, LuPlus as Plus, LuFileText as FileText } from 'react-icons/lu';
 import Link from 'next/link';
 
 // Mock data - replace with actual data fetching

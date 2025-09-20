@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Download, FileText } from 'lucide-react';
+import { LuArrowRight as ArrowRight, LuCircleCheck as CheckCircle, LuDownload as Download, LuFileText as FileText } from 'react-icons/lu';
 
 export function Hero() {
   return (

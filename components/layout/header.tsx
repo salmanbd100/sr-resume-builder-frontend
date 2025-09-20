@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { FileText, User, LogOut, Settings } from 'lucide-react';
+import { LuFileText as FileText, LuUser as User, LuLogOut as LogOut, LuSettings as Settings } from 'react-icons/lu';
 
 export function Header() {
   const { data: session, status } = useSession();

@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import { Github, Mail, Eye, EyeOff } from 'lucide-react';
+import { LuGithub as Github, LuMail as Mail, LuEye as Eye, LuEyeOff as EyeOff } from 'react-icons/lu';
 
 const signInSchema = z.object({
   email: z.string().email('Please enter a valid email address'),

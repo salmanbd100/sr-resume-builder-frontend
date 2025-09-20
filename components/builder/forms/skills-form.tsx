@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, X } from 'lucide-react';
+import { LuPlus as Plus, LuX as X } from 'react-icons/lu';
 import type { Skill } from '@/lib/types';
 import { DatePicker } from '@/components/ui/date-picker';
 

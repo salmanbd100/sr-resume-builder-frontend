@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FileText, Github, Twitter, Linkedin } from 'lucide-react';
+import { LuFileText as FileText, LuGithub as Github, LuTwitter as Twitter, LuLinkedin as Linkedin } from 'react-icons/lu';
 
 export function Footer() {
   return (

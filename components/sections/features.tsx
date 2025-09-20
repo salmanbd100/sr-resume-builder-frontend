@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Download, Zap, Shield, Smartphone, Users } from 'lucide-react';
+import { LuFileText as FileText, LuDownload as Download, LuZap as Zap, LuShield as Shield, LuSmartphone as Smartphone, LuUsers as Users } from 'react-icons/lu';
 
 const features = [
   {

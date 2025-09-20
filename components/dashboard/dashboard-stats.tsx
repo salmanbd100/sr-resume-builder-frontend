@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Download, Eye, TrendingUp } from 'lucide-react';
+import { LuFileText as FileText, LuDownload as Download, LuEye as Eye, LuTrendingUp as TrendingUp } from 'react-icons/lu';
 
 export function DashboardStats() {
   return (

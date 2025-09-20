@@ -11,16 +11,16 @@ import { EducationForm } from './forms/education-form';
 import { SkillsForm } from './forms/skills-form';
 import { ResumePreview } from './resume-preview';
 import {
-  ChevronLeft,
-  ChevronRight,
-  Save,
-  Download,
-  User,
-  FileText,
-  Briefcase,
-  GraduationCap,
-  Wrench,
-} from 'lucide-react';
+  LuChevronLeft as ChevronLeft,
+  LuChevronRight as ChevronRight,
+  LuSave as Save,
+  LuDownload as Download,
+  LuUser as User,
+  LuFileText as FileText,
+  LuBriefcase as Briefcase,
+  LuGraduationCap as GraduationCap,
+  LuWrench as Wrench,
+} from 'react-icons/lu';
 
 const steps = [
   { id: 'personal', title: 'Personal Details', icon: User },

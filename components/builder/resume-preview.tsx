@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { Mail, Phone, MapPin, Linkedin, Globe, Github } from 'lucide-react';
+import { LuMail as Mail, LuPhone as Phone, LuMapPin as MapPin, LuLinkedin as Linkedin, LuGlobe as Globe, LuGithub as Github } from 'react-icons/lu';
 
 interface ResumePreviewProps {
   data: any;

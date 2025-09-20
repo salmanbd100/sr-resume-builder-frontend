@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
-import { Plus } from 'lucide-react';
+import { LuPlus as Plus } from 'react-icons/lu';
 import Link from 'next/link';
 
 export function DashboardHeader() {
