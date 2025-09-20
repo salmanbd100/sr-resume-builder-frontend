@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LuFileText as FileText, LuGithub as Github, LuTwitter as Twitter, LuLinkedin as Linkedin } from 'react-icons/lu';
+import { LuFileText, LuGithub, LuTwitter, LuLinkedin } from 'react-icons/lu';
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <FileText className="h-6 w-6 text-primary" />
+              <LuFileText className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold">ResumeBuilder</span>
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -16,13 +16,13 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Twitter className="h-5 w-5" />
+                <LuTwitter className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Linkedin className="h-5 w-5" />
+                <LuLinkedin className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Github className="h-5 w-5" />
+                <LuGithub className="h-5 w-5" />
               </Link>
             </div>
           </div>

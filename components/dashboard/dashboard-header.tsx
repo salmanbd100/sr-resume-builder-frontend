@@ -2,7 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { Button } from '@/components/ui/button';
-import { LuPlus as Plus } from 'react-icons/lu';
+import { LuPlus } from 'react-icons/lu';
 import Link from 'next/link';
 
 export function DashboardHeader() {
@@ -22,7 +22,7 @@ export function DashboardHeader() {
           </div>
           <Button asChild>
             <Link href="/builder">
-              <Plus className="mr-2 h-4 w-4" />
+              <LuPlus className="mr-2 h-4 w-4" />
               Create New Resume
             </Link>
           </Button>

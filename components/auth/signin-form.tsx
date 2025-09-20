@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
-import { LuGithub as Github, LuMail as Mail, LuEye as Eye, LuEyeOff as EyeOff } from 'react-icons/lu';
+import { LuGithub, LuMail, LuEye, LuEyeOff } from 'react-icons/lu';
 
 const signInSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
@@ -87,7 +87,7 @@ export function SignInForm() {
           onClick={() => handleSocialSignIn('google')}
           disabled={isLoading}
         >
-          <Mail className="mr-2 h-4 w-4" />
+          <LuMail className="mr-2 h-4 w-4" />
           Continue with Google
         </Button>
         <Button
@@ -96,7 +96,7 @@ export function SignInForm() {
           onClick={() => handleSocialSignIn('github')}
           disabled={isLoading}
         >
-          <Github className="mr-2 h-4 w-4" />
+          <LuGithub className="mr-2 h-4 w-4" />
           Continue with GitHub
         </Button>
       </div>
@@ -141,7 +141,7 @@ export function SignInForm() {
               onClick={() => setShowPassword(!showPassword)}
               disabled={isLoading}
             >
-              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              {showPassword ? <LuEyeOff className="h-4 w-4" /> : <LuEye className="h-4 w-4" />}
             </Button>
           </div>
           {errors.password && <p className="text-sm text-destructive">{errors.password.message}</p>}

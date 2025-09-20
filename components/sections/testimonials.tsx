@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { LuStar as Star } from 'react-icons/lu';
+import { LuStar } from 'react-icons/lu';
 
 const testimonials = [
   {
@@ -56,7 +56,7 @@ export function Testimonials() {
               <CardContent className="p-6 space-y-4">
                 <div className="flex space-x-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    <LuStar key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
                 <p className='text-sm text-muted-foreground'>&quot;{testimonial.content}&quot;</p>

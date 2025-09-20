@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LuFileText as FileText, LuDownload as Download, LuEye as Eye, LuTrendingUp as TrendingUp } from 'react-icons/lu';
+import { LuFileText, LuDownload, LuEye, LuTrendingUp } from 'react-icons/lu';
 
 export function DashboardStats() {
   return (
@@ -7,7 +7,7 @@ export function DashboardStats() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Total Resumes</CardTitle>
-          <FileText className="h-4 w-4 text-muted-foreground" />
+          <LuFileText className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">3</div>
@@ -17,7 +17,7 @@ export function DashboardStats() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Downloads</CardTitle>
-          <Download className="h-4 w-4 text-muted-foreground" />
+          <LuDownload className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">12</div>
@@ -27,7 +27,7 @@ export function DashboardStats() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Profile Views</CardTitle>
-          <Eye className="h-4 w-4 text-muted-foreground" />
+          <LuEye className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">45</div>
@@ -37,7 +37,7 @@ export function DashboardStats() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
-          <TrendingUp className="h-4 w-4 text-muted-foreground" />
+          <LuTrendingUp className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">78%</div>

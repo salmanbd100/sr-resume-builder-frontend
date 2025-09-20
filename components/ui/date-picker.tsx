@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { format } from 'date-fns';
-import { LuCalendar as CalendarIcon } from 'react-icons/lu';
+import { LuCalendar } from 'react-icons/lu';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -44,7 +44,7 @@ export function DatePicker({ value, onChange, disabled }: DatePickerProps) {
           )}
           disabled={disabled}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
+          <LuCalendar className="mr-2 h-4 w-4" />
           {date ? format(date, 'PPP') : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>

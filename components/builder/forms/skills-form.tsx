@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LuPlus as Plus, LuX as X } from 'react-icons/lu';
+import { LuPlus, LuX } from 'react-icons/lu';
 import type { Skill } from '@/lib/types';
 import { DatePicker } from '@/components/ui/date-picker';
 
@@ -148,7 +148,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
           </div>
 
           <Button onClick={addSkill} className="w-full">
-            <Plus className="mr-2 h-4 w-4" />
+            <LuPlus className="mr-2 h-4 w-4" />
             Add Skill
           </Button>
         </CardContent>
@@ -176,7 +176,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
                     className="h-4 w-4 p-0 hover:bg-transparent"
                     onClick={() => removeSkill(skill.id)}
                   >
-                    <X className="h-3 w-3" />
+                    <LuX className="h-3 w-3" />
                   </Button>
                 </Badge>
               ))}
@@ -193,7 +193,6 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">
-              {skillsByCategory.soft.map((skill) => (
                 <Badge
                   key={skill.id}
                   variant="secondary"
@@ -207,7 +206,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
                     className="h-4 w-4 p-0 hover:bg-transparent"
                     onClick={() => removeSkill(skill.id)}
                   >
-                    <X className="h-3 w-3" />
+                    <LuX className="h-3 w-3" />
                   </Button>
                 </Badge>
               ))}
@@ -238,7 +237,7 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
                     className="h-4 w-4 p-0 hover:bg-transparent"
                     onClick={() => removeSkill(skill.id)}
                   >
-                    <X className="h-3 w-3" />
+                    <LuX className="h-3 w-3" />
                   </Button>
                 </Badge>
               ))}

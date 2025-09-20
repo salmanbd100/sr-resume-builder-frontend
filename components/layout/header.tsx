@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { LuFileText as FileText, LuUser as User, LuLogOut as LogOut, LuSettings as Settings } from 'react-icons/lu';
+import { LuFileText, LuUser, LuLogOut, LuSettings } from 'react-icons/lu';
 
 export function Header() {
   const { data: session, status } = useSession();
@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 mx-auto">
         <Link href="/" className="flex items-center space-x-2">
-          <FileText className="h-6 w-6 text-primary" />
+          <LuFileText className="h-6 w-6 text-primary" />
           <span className="text-xl font-bold">ResumeBuilder</span>
         </Link>
 
@@ -75,19 +75,19 @@ export function Header() {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <Link href="/dashboard">
-                    <User className="mr-2 h-4 w-4" />
+                    <LuUser className="mr-2 h-4 w-4" />
                     Dashboard
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/settings">
-                    <Settings className="mr-2 h-4 w-4" />
+                    <LuSettings className="mr-2 h-4 w-4" />
                     Settings
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={() => signOut()}>
-                  <LogOut className="mr-2 h-4 w-4" />
+                  <LuLogOut className="mr-2 h-4 w-4" />
                   Sign out
                 </DropdownMenuItem>
               </DropdownMenuContent>

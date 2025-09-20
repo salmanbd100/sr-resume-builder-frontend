@@ -1,7 +1,7 @@
 import { SignInForm } from '@/components/auth/signin-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
-import { LuFileText as FileText } from 'react-icons/lu';
+import { LuFileText } from 'react-icons/lu';
 
 export default function SignInPage() {
   return (
@@ -9,7 +9,7 @@ export default function SignInPage() {
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
           <Link href="/" className="inline-flex items-center space-x-2 mb-6">
-            <FileText className="h-6 w-6 text-primary" />
+            <LuFileText className="h-6 w-6 text-primary" />
             <span className="text-xl font-bold">ResumeBuilder</span>
           </Link>
         </div>

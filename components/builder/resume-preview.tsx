@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { LuMail as Mail, LuPhone as Phone, LuMapPin as MapPin, LuLinkedin as Linkedin, LuGlobe as Globe, LuGithub as Github } from 'react-icons/lu';
+import { LuMail, LuPhone, LuMapPin, LuLinkedin, LuGlobe, LuGithub } from 'react-icons/lu';
 
 interface ResumePreviewProps {
   data: any;
@@ -31,19 +31,19 @@ export function ResumePreview({ data }: ResumePreviewProps) {
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             {personalDetails?.email && (
               <div className="flex items-center gap-1">
-                <Mail className="h-3 w-3" />
+                <LuMail className="h-3 w-3" />
                 {personalDetails.email}
               </div>
             )}
             {personalDetails?.phone && (
               <div className="flex items-center gap-1">
-                <Phone className="h-3 w-3" />
+                <LuPhone className="h-3 w-3" />
                 {personalDetails.phone}
               </div>
             )}
             {personalDetails?.location && (
               <div className="flex items-center gap-1">
-                <MapPin className="h-3 w-3" />
+                <LuMapPin className="h-3 w-3" />
                 {personalDetails.location}
               </div>
             )}
@@ -52,19 +52,19 @@ export function ResumePreview({ data }: ResumePreviewProps) {
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             {personalDetails?.linkedin && (
               <div className="flex items-center gap-1 text-blue-600">
-                <Linkedin className="h-3 w-3" />
+                <LuLinkedin className="h-3 w-3" />
                 LinkedIn
               </div>
             )}
             {personalDetails?.website && (
               <div className="flex items-center gap-1 text-blue-600">
-                <Globe className="h-3 w-3" />
+                <LuGlobe className="h-3 w-3" />
                 Website
               </div>
             )}
             {personalDetails?.github && (
               <div className="flex items-center gap-1 text-blue-600">
-                <Github className="h-3 w-3" />
+                <LuGithub className="h-3 w-3" />
                 GitHub
               </div>
             )}

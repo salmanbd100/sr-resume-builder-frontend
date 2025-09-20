@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { LuEye as Eye } from 'react-icons/lu';
+import { LuEye } from 'react-icons/lu';
 
 const templates = [
   {
@@ -61,7 +61,7 @@ export function Templates() {
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <Button size="sm" variant="secondary">
-                      <Eye className="mr-2 h-4 w-4" />
+                      <LuEye className="mr-2 h-4 w-4" />
                       Preview
                     </Button>
                   </div>

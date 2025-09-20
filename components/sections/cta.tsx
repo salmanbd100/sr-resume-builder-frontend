@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { LuArrowRight as ArrowRight } from 'react-icons/lu';
+import { LuArrowRight } from 'react-icons/lu';
 
 export function CTA() {
   return (
@@ -16,7 +16,7 @@ export function CTA() {
             <Button size="lg" variant="secondary" asChild>
               <Link href="/auth/signup">
                 Start Building Now
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <LuArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button

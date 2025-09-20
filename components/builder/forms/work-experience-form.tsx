@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LuPlus as Plus, LuTrash2 as Trash2 } from 'react-icons/lu';
+import { LuPlus, LuTrash2 } from 'react-icons/lu';
 import { DatePicker } from '@/components/ui/date-picker';
 import { workExperienceSchema } from '@/lib/schemas';
 import type { WorkExperience } from '@/lib/types';
@@ -85,7 +85,7 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
               <CardTitle className="text-lg">Experience {index + 1}</CardTitle>
               {fields.length > 1 && (
                 <Button type="button" variant="ghost" size="sm" onClick={() => remove(index)}>
-                  <Trash2 className="h-4 w-4" />
+                  <LuTrash2 className="h-4 w-4" />
                 </Button>
               )}
             </div>
@@ -212,7 +212,7 @@ export function WorkExperienceForm({ data, onChange }: WorkExperienceFormProps) 
         onClick={addExperience}
         className="w-full bg-transparent"
       >
-        <Plus className="mr-2 h-4 w-4" />
+        <LuPlus className="mr-2 h-4 w-4" />
         Add Another Experience
       </Button>
     </div>

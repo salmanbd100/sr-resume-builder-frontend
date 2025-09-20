@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { LuEllipsis as MoreHorizontal, LuPencil as Edit, LuDownload as Download, LuCopy as Copy, LuTrash2 as Trash2, LuEye as Eye, LuPlus as Plus, LuFileText as FileText } from 'react-icons/lu';
+import { LuEllipsis, LuPencil, LuDownload, LuCopy, LuTrash2, LuEye, LuPlus, LuFileText } from 'react-icons/lu';
 import Link from 'next/link';
 
 // Mock data - replace with actual data fetching
@@ -51,7 +51,7 @@ export function ResumeGrid() {
         <h2 className="text-2xl font-bold">Your Resumes</h2>
         <Button asChild>
           <Link href="/builder">
-            <Plus className="mr-2 h-4 w-4" />
+            <LuPlus className="mr-2 h-4 w-4" />
             Create New
           </Link>
         </Button>
@@ -62,7 +62,7 @@ export function ResumeGrid() {
           <CardContent>
             <div className="space-y-4">
               <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto">
-                <FileText className="h-8 w-8 text-muted-foreground" />
+                <LuFileText className="h-8 w-8 text-muted-foreground" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold">No resumes yet</h3>
@@ -70,7 +70,7 @@ export function ResumeGrid() {
               </div>
               <Button asChild>
                 <Link href="/builder">
-                  <Plus className="mr-2 h-4 w-4" />
+                  <LuPlus className="mr-2 h-4 w-4" />
                   Create Your First Resume
                 </Link>
               </Button>
@@ -90,31 +90,31 @@ export function ResumeGrid() {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="sm">
-                        <MoreHorizontal className="h-4 w-4" />
+                        <LuEllipsis className="h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <DropdownMenuItem asChild>
                         <Link href={`/builder/${resume.id}`}>
-                          <Edit className="mr-2 h-4 w-4" />
+                          <LuPencil className="mr-2 h-4 w-4" />
                           Edit
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Eye className="mr-2 h-4 w-4" />
+                        <LuEye className="mr-2 h-4 w-4" />
                         Preview
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Download className="mr-2 h-4 w-4" />
+                        <LuDownload className="mr-2 h-4 w-4" />
                         Download PDF
                       </DropdownMenuItem>
                       <DropdownMenuItem>
-                        <Copy className="mr-2 h-4 w-4" />
+                        <LuCopy className="mr-2 h-4 w-4" />
                         Duplicate
                       </DropdownMenuItem>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem className="text-destructive">
-                        <Trash2 className="mr-2 h-4 w-4" />
+                        <LuTrash2 className="mr-2 h-4 w-4" />
                         Delete
                       </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -125,7 +125,7 @@ export function ResumeGrid() {
                 <div className="aspect-[3/4] bg-muted rounded-lg flex items-center justify-center">
                   <div className="text-center space-y-2">
                     <div className="w-12 h-12 bg-background rounded-lg flex items-center justify-center mx-auto">
-                      <FileText className="h-6 w-6 text-muted-foreground" />
+                      <LuFileText className="h-6 w-6 text-muted-foreground" />
                     </div>
                     <p className="text-sm text-muted-foreground">Resume Preview</p>
                   </div>

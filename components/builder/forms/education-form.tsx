@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LuPlus as Plus, LuTrash2 as Trash2, LuCalendar as CalendarIcon } from 'react-icons/lu';
+import { LuPlus, LuTrash2, LuCalendar } from 'react-icons/lu';
 import { educationSchema } from '@/lib/schemas';
 import type { Education } from '@/lib/types';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
@@ -86,7 +86,7 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
               <CardTitle className="text-lg">Education {index + 1}</CardTitle>
               {fields.length > 1 && (
                 <Button type="button" variant="ghost" size="sm" onClick={() => remove(index)}>
-                  <Trash2 className="h-4 w-4" />
+                  <LuTrash2 className="h-4 w-4" />
                 </Button>
               )}
             </div>
@@ -152,7 +152,7 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
                             !field.value && 'text-muted-foreground'
                           )}
                         >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          <LuCalendar className="mr-2 h-4 w-4" />
                           {field.value ? (
                             format(new Date(field.value), 'PPP')
                           ) : (
@@ -223,7 +223,7 @@ export function EducationForm({ data, onChange }: EducationFormProps) {
         onClick={addEducation}
         className="w-full bg-transparent"
       >
-        <Plus className="mr-2 h-4 w-4" />
+        <LuPlus className="mr-2 h-4 w-4" />
         Add Another Education
       </Button>
     </div>

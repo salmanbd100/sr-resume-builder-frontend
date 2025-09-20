@@ -1,39 +1,39 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { LuFileText as FileText, LuDownload as Download, LuZap as Zap, LuShield as Shield, LuSmartphone as Smartphone, LuUsers as Users } from 'react-icons/lu';
+import { LuFileText, LuDownload, LuZap, LuShield, LuSmartphone, LuUsers } from 'react-icons/lu';
 
 const features = [
   {
-    icon: FileText,
+    icon: LuFileText,
     title: 'ATS-Compliant Templates',
     description:
       'Our templates are designed to pass Applicant Tracking Systems, ensuring your resume gets seen by human recruiters.',
   },
   {
-    icon: Download,
+    icon: LuDownload,
     title: 'Instant PDF Export',
     description:
       'Export your resume to high-quality PDF format with a single click. Perfect formatting guaranteed.',
   },
   {
-    icon: Zap,
+    icon: LuZap,
     title: 'Quick & Easy Builder',
     description:
       'Build your resume in minutes with our intuitive step-by-step builder. No design skills required.',
   },
   {
-    icon: Shield,
+    icon: LuShield,
     title: 'Secure & Private',
     description:
       'Your data is encrypted and secure. We never share your information with third parties.',
   },
   {
-    icon: Smartphone,
+    icon: LuSmartphone,
     title: 'Mobile Responsive',
     description:
       'Build and edit your resume on any device. Our platform works seamlessly on desktop, tablet, and mobile.',
   },
   {
-    icon: Users,
+    icon: LuUsers,
     title: 'Multiple Templates',
     description:
       'Choose from various professional templates designed for different industries and career levels.',

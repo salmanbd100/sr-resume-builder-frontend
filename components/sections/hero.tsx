@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { LuArrowRight as ArrowRight, LuCircleCheck as CheckCircle, LuDownload as Download, LuFileText as FileText } from 'react-icons/lu';
+import { LuArrowRight, LuCircleCheck, LuDownload, LuFileText } from 'react-icons/lu';
 
 export function Hero() {
   return (
@@ -22,7 +22,7 @@ export function Hero() {
               <Button size="lg" asChild>
                 <Link href="/builder">
                   Start Building Free
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <LuArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
@@ -32,15 +32,15 @@ export function Hero() {
 
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="h-4 w-4 text-green-500" />
+                <LuCircleCheck className="h-4 w-4 text-green-500" />
                 <span>ATS Optimized</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Download className="h-4 w-4 text-green-500" />
+                <LuDownload className="h-4 w-4 text-green-500" />
                 <span>PDF Export</span>
               </div>
               <div className="flex items-center space-x-2">
-                <FileText className="h-4 w-4 text-green-500" />
+                <LuFileText className="h-4 w-4 text-green-500" />
                 <span>Professional Templates</span>
               </div>
             </div>
@@ -51,7 +51,7 @@ export function Hero() {
               <div className="bg-white rounded-lg shadow-2xl p-6 space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <FileText className="h-6 w-6 text-primary" />
+                    <LuFileText className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold">John Doe</h3>

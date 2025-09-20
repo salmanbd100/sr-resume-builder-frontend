@@ -11,23 +11,23 @@ import { EducationForm } from './forms/education-form';
 import { SkillsForm } from './forms/skills-form';
 import { ResumePreview } from './resume-preview';
 import {
-  LuChevronLeft as ChevronLeft,
-  LuChevronRight as ChevronRight,
-  LuSave as Save,
-  LuDownload as Download,
-  LuUser as User,
-  LuFileText as FileText,
-  LuBriefcase as Briefcase,
-  LuGraduationCap as GraduationCap,
-  LuWrench as Wrench,
+  LuChevronLeft,
+  LuChevronRight,
+  LuSave,
+  LuDownload,
+  LuUser,
+  LuFileText,
+  LuBriefcase,
+  LuGraduationCap,
+  LuWrench,
 } from 'react-icons/lu';
 
 const steps = [
-  { id: 'personal', title: 'Personal Details', icon: User },
-  { id: 'summary', title: 'Summary', icon: FileText },
-  { id: 'experience', title: 'Work Experience', icon: Briefcase },
-  { id: 'education', title: 'Education', icon: GraduationCap },
-  { id: 'skills', title: 'Skills', icon: Wrench },
+  { id: 'personal', title: 'Personal Details', icon: LuUser },
+  { id: 'summary', title: 'Summary', icon: LuFileText },
+  { id: 'experience', title: 'Work Experience', icon: LuBriefcase },
+  { id: 'education', title: 'Education', icon: LuGraduationCap },
+  { id: 'skills', title: 'Skills', icon: LuWrench },
 ];
 
 export function ResumeBuilder() {
@@ -169,24 +169,24 @@ export function ResumeBuilder() {
             {/* Navigation Buttons */}
             <div className="flex items-center justify-between">
               <Button variant="outline" onClick={handlePrevious} disabled={currentStep === 0}>
-                <ChevronLeft className="mr-2 h-4 w-4" />
+                <LuChevronLeft className="mr-2 h-4 w-4" />
                 Previous
               </Button>
 
               <div className="flex items-center space-x-2">
                 <Button variant="outline">
-                  <Save className="mr-2 h-4 w-4" />
+                  <LuSave className="mr-2 h-4 w-4" />
                   Save Draft
                 </Button>
                 <Button variant="outline">
-                  <Download className="mr-2 h-4 w-4" />
+                  <LuDownload className="mr-2 h-4 w-4" />
                   Download PDF
                 </Button>
               </div>
 
               <Button onClick={handleNext} disabled={currentStep === steps.length - 1}>
                 Next
-                <ChevronRight className="ml-2 h-4 w-4" />
+                <LuChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
